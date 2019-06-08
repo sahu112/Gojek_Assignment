@@ -20,7 +20,7 @@ public class GojekGenricUtils {
 	
 	public static Properties prop;
 	static long IMPLICITE_WAIT=20;
-	static long PAGE_TIMEOUT=10;
+	static long PAGE_TIMEOUT=20;
 	Actions act;
 	
 	
@@ -51,7 +51,7 @@ public class GojekGenricUtils {
 			System.setProperty("webdriver.chrome.driver", "F:\\EclipsPGM\\GoJek_Assignment\\Chrome\\chromedriver.exe");
 			Driver.driver=new ChromeDriver();
 		}else if(browsername.equals("FF")) {
-			System.setProperty("webdriver.geko.driver", "D:\\\\chromedriver\\\\chromedriver.exe");
+			System.setProperty("webdriver.gecko.driver", "F:\\EclipsPGM\\GoJek_Assignment\\geckoDriver\\geckodriver.exe");
 			Driver.driver=new FirefoxDriver();
 			}
 		
