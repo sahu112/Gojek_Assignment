@@ -1,20 +1,20 @@
 package com.Gojek.GenricUtils;
 
+import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.util.Properties;
 import java.util.concurrent.TimeUnit;
 
-import org.openqa.selenium.By;
-import org.openqa.selenium.WebElement;
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.interactions.Actions;
-import org.openqa.selenium.support.ui.ExpectedConditions;
-import org.openqa.selenium.support.ui.WebDriverWait;
 
-import com.Gojek.PageFactory.LoginPage;
 
 public class GojekGenricUtils {
 	
@@ -51,6 +51,9 @@ public class GojekGenricUtils {
 		}else if(browsername.equals("FF")) {
 			System.setProperty("webdriver.gecko.driver", "F:\\EclipsPGM\\GoJek_Assignment\\geckoDriver\\geckodriver.exe");
 			Driver.driver=new FirefoxDriver();
+			}else if(browsername.equals("IE")) {
+				System.setProperty("webdriver.ie.driver", "F:\\EclipsPGM\\GoJek_Assignment\\IEDriver\\IEDriverServer.exe");
+				Driver.driver=new InternetExplorerDriver();		
 			}
 		
 		Driver.driver.manage().window().maximize();
@@ -67,8 +70,11 @@ public class GojekGenricUtils {
 		
 	}
 	
-	/*public void expliciteWait(WebElement xpath) {
-		WebDriverWait wait=new WebDriverWait(Driver.driver, IMPLICITE_WAIT);
-		wait.until(ExpectedConditions.visibilityOfElementLocated(xpath));
-	}*/
+	public static void takeScreenshotAtEndOfTest() throws IOException {
+		File scrFile = ((TakesScreenshot) Driver.driver).getScreenshotAs(OutputType.FILE);
+		String currentDir = System.getProperty("user.dir");
+		FileUtils.copyFile(scrFile, new File(currentDir + "/screenshots/" + System.currentTimeMillis() + ".png"));
+	}
+	
+	
 }

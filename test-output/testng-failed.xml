@@ -1,24 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite thread-count="3" parallel="classes" name="Failed suite [Suite]" guice-stage="DEVELOPMENT">
-  <test thread-count="3" parallel="classes" name="Test(failed)">
+<suite name="Failed suite [Default suite]" guice-stage="DEVELOPMENT">
+  <test thread-count="5" name="Default test(failed)">
     <classes>
       <class name="com.Gojek.AssigmentTest.HomePageTest">
         <methods>
           <include name="launchBrowser"/>
-          <include name="addEarphoneToCart"/>
           <include name="quitDriver"/>
-          <include name="deleteItemsFromCart"/>
           <include name="addSeondItem"/>
         </methods>
       </class> <!-- com.Gojek.AssigmentTest.HomePageTest -->
-      <class name="com.Gojek.AssigmentTest.LoginTest">
-        <methods>
-          <include name="quiteDriver"/>
-          <include name="launchBrowser"/>
-          <include name="loginAndLogout"/>
-        </methods>
-      </class> <!-- com.Gojek.AssigmentTest.LoginTest -->
     </classes>
-  </test> <!-- Test(failed) -->
-</suite> <!-- Failed suite [Suite] -->
+  </test> <!-- Default test(failed) -->
+</suite> <!-- Failed suite [Default suite] -->

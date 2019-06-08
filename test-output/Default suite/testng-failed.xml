@@ -6,9 +6,7 @@
       <class name="com.Gojek.AssigmentTest.HomePageTest">
         <methods>
           <include name="launchBrowser"/>
-          <include name="addEarphoneToCart"/>
           <include name="quitDriver"/>
-          <include name="deleteItemsFromCart"/>
           <include name="addSeondItem"/>
         </methods>
       </class> <!-- com.Gojek.AssigmentTest.HomePageTest -->
