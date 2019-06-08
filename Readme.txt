@@ -1,8 +1,8 @@
 Email - gojekassignment3@gmail.com
 Password - sachin12345
 
-Please login to gmail manually using this username and password.
-When you frist time login on Aamzon.com it will send a code to Gmail id, enter that code.
+Please login to Gmail manually using this username and password.
+When you first time login on Aamzon.com it will send a code to Gmail id, enter that code.
 
 this is one time verification code after that we are good to go.
 
