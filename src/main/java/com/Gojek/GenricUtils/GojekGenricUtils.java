@@ -40,15 +40,13 @@ public class GojekGenricUtils {
 		
 		
 	}
-	
-	
 	public void initialization() {
 		
 		
 		String browsername=prop.getProperty("browser");
 		
 		if(browsername.equals("chrome")) {
-			System.setProperty("webdriver.chrome.driver", "F:\\EclipsPGM\\GoJek_Assignment\\Chrome\\chromedriver.exe");
+			System.setProperty("webdriver.chrome.driver", "F:\\EclipsPGM\\GoJek_Assignment\\ChromeDriver\\chromedriver.exe");
 			Driver.driver=new ChromeDriver();
 		}else if(browsername.equals("FF")) {
 			System.setProperty("webdriver.gecko.driver", "F:\\EclipsPGM\\GoJek_Assignment\\geckoDriver\\geckodriver.exe");
